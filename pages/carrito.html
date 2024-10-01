@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <title>Malú - Equipos</title>
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <!-- Menú de navegación -->
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="/pages/equipos.html">Equipos</a></li>
+                <li><a href="/pages/carrito.html">Depilación</a></li>
+                <li><a href="/pages/nosotros.html">Nosotros</a></li>
+                <li><a href="/pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Contenido principal de Depilación -->
+        <section aria-labelledby="titulo-depilacion">
+            <h1 id="titulo-depilacion">Depilación</h1>
+            <p>Selecciona los servicios de depilación que desees y agrégalos al carrito para finalizar tu compra.</p>
+
+            <!-- Lista de servicios -->
+            <div class="container text-center">
+            <div class="servicios">
+                <div class="row row-cols-2">
+                <article>
+                    <div class="card" style="width: 15rem; height: auto;" >
+                        <img src="/images/cuerpoentero.jpg" class="card-img-top" alt="Depilacion de cuerpo entero">
+                        <div class="card-body">
+                        <h5 class="card-title">Cuerpo entero</h5>
+                        <p class="card-text">Combo Cuerpo completo</p>
+                        <button onclick="agregarAlCarrito('Depilación SHR Corporal', 120)">Agregar al Carrito - $120</button>
+                    </div>    
+                    </div>
+                </article>
+
+                <article>
+                    <div class="card" style="width: 15rem; height: auto;" >
+                        <img src="/images/cuerpoentero.jpg" class="card-img-top" alt="Depilacion de cuerpo entero">
+                        <div class="card-body">
+                        <h5 class="card-title">Cuerpo entero</h5>
+                        <p class="card-text">Combo Cuerpo completo</p>
+                        <button onclick="agregarAlCarrito('Depilación SHR Corporal', 120)">Agregar al Carrito - $120</button>
+                        </div>    
+                        </div>
+                </article>
+
+                <article>
+                    <div class="card" style="width: 15rem; height: auto;" >
+                        <img src="/images/cuerpoentero.jpg" class="card-img-top" alt="Depilacion de cuerpo entero">
+                        <div class="card-body">
+                        <h5 class="card-title">Cuerpo entero</h5>
+                        <p class="card-text">Combo Cuerpo completo</p>
+                        <button onclick="agregarAlCarrito('Depilación SHR Corporal', 120)">Agregar al Carrito - $120</button>
+                        </div>    
+                        </div>
+                </article>
+
+                <article>
+                    <div class="card" style="width: 15rem; height: auto;" >
+                    <img src="/images/cuerpoentero.jpg" class="card-img-top" alt="Depilacion de cuerpo entero">
+                    <div class="card-body">
+                    <h5 class="card-title">Cuerpo entero</h5>
+                    <p class="card-text">Combo Cuerpo completo</p>
+                    <button onclick="agregarAlCarrito('Depilación SHR Corporal', 120)">Agregar al Carrito - $120</button>
+                    </div>    
+                    </div>
+
+                </article>
+                    
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Carrito de Compras -->
+        <section aria-labelledby="titulo-carrito" class="carrito">
+            <h2 id="titulo-carrito">Carrito de Compras</h2>
+            <ul id="lista-carrito">
+                <!-- Los servicios seleccionados aparecerán aquí -->
+            </ul>
+            <p>Total: $<span id="total-carrito">0</span></p>
+            <button onclick="finalizarCompra()">Finalizar Compra</button>
+        </section>
+    </main>
+
+    <footer>
+        <section aria-label="redes-sociales">
+            <p>Síguenos en nuestras redes sociales:</p>
+            <ul class="redes-sociales">
+                <li><a href="https://facebook.com" aria-label="Facebook">Facebook</a></li>
+                <li><a href="https://instagram.com" aria-label="Instagram">Instagram</a></li>
+            </ul>
+        </section>
+        <p>&copy; 2024 Centro de Estética. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para manejar el carrito de compras -->
+    <script>
+        let carrito = [];
+        let total = 0;
+
+        function agregarAlCarrito(servicio, precio) {
+            carrito.push({ servicio, precio });
+            total += precio;
+            actualizarCarrito();
+        }
+
+        function actualizarCarrito() {
+            const listaCarrito = document.getElementById('lista-carrito');
+            const totalCarrito = document.getElementById('total-carrito');
+            listaCarrito.innerHTML = '';
+            carrito.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.servicio} - $${item.precio}`;
+                listaCarrito.appendChild(li);
+            });
+            totalCarrito.textContent = total;
+        }
+
+        function finalizarCompra() {
+            if (carrito.length === 0) {
+                alert('El carrito está vacío. Por favor, selecciona al menos un servicio.');
+            } else {
+                alert('Gracias por tu compra. Nos pondremos en contacto contigo pronto.');
+                carrito = [];
+                total = 0;
+                actualizarCarrito();
+            }
+        }
+    </script>
+
+        <!-- Bootstrap Jv -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
