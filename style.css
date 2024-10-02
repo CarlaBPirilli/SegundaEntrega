@@ -64,6 +64,7 @@ margin: 0;
 padding: 0;
 width: 100%;
 }
+
 /* Index acordeon */
 .servicios-destacados{
     text-align: center;
@@ -128,6 +129,17 @@ width: 100%;
     display: grid;
     margin: auto;
     padding: 20px;
+}
+
+/*CONTACTO*/
+.form-label{
+    text-align: left;
+    display: block;
+}
+
+#informacion-contacto {
+    padding: auto;
+    margin: 5px;
 }
 
 /* Modelo responsive */
