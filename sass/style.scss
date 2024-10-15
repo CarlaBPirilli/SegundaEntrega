@@ -1,0 +1,241 @@
+/*Estilos generales de la pagina*/
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    
+};
+
+ul {
+font-family:  "Poppins", sans-serif;
+font-weight: 700;
+font-style: normal;
+color: black;
+}
+
+
+/* Estilos generales para el menú */
+.menu-principal {
+background-color: #333; 
+text-align: center; 
+padding: 10px 0; 
+}
+
+
+.menu-principal ul {
+list-style-type: none; 
+margin: 0; 
+padding: 0; 
+}
+
+.menu-principal li {
+margin-bottom: 15px; 
+}
+
+.menu-principal a {
+color: #fff; 
+text-decoration: none; 
+font-size: 18px; 
+padding: 10px 20px; 
+display: block; 
+}
+
+.menu-principal a:hover {
+background-color: #555; 
+}
+
+/* Estilos Navegacion*/
+nav a {
+text-decoration: none;
+color: inherit; 
+cursor: pointer;
+}
+
+nav a:hover {
+text-decoration: underline;
+}
+
+nav a:visited {
+text-decoration: none;
+}
+
+.video {
+margin: 0;
+padding: 0;
+width: 100%;
+}
+
+/* Index acordeon */
+.servicios-destacados{
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    color:rgb(23, 108, 122)
+}
+
+.listas-acordeon {
+    text-align: left;
+    text-size-adjust: auto;
+    list-style-type: none;
+    line-height: 2em;
+    padding: 12px;
+    margin: 10px;
+}
+
+.resaltadoListaAcordeon {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: rgb(190, 89, 148);
+}
+
+.comentarios {
+    text-align: center;
+}
+
+/* Equipos */
+.card-equipos {
+    grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas iguales */
+    grid-gap: 20px; /* Espacio entre columnas */
+    border: 1px solid #ddd; /* Borde de la tarjeta */
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center; /* Alinea verticalmente */
+}
+
+.card-image img {
+    grid-column: 2; /* La imagen ocupará 2 columnas */
+    width: auto;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.texto-equipos {
+    grid-column: 50%; /* El contenido ocupará las otras 2 columnas */
+    width:auto;
+    text-align: center;
+}
+
+.texto-equipos h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+.texto-equipos p {
+    font-size: 1em;
+    color: #666;
+    text-align: left;
+}
+
+.equipos-box {
+    display: grid;
+    margin: auto;
+    padding: 20px;
+}
+
+/*CONTACTO*/
+.form-label{
+    text-align: left;
+    display: block;
+}
+
+#informacion-contacto {
+    padding: auto;
+    margin: 5px;
+}
+
+/* Modelo responsive */
+@media (min-width: 768px) {
+.menu-principal ul {
+    display: flex; 
+    flex-direction: row; 
+    justify-content:center; 
+    align-items:stretch; 
+}
+
+.menu-principal li {
+    margin-bottom: 0; 
+    margin-right: 20px; 
+}
+}
+
+@media (max-width: 767px) {
+.menu-principal ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: auto;
+    height: auto;
+    width: auto;
+}
+
+.menu-principal li {
+    margin-right: 0; 
+    font-size: 8px; 
+}
+
+
+.card-equipos{
+    flex-direction: column;
+    align-items: center;
+}
+.servicios{
+    flex-direction: column;
+    align-items: center;
+}
+
+}
+
+.servicios {
+    grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas iguales */
+    grid-gap: 20rem; /* Espacio entre columnas */
+    padding: 20px;
+    align-items: center; /* Alinea verticalmente */
+}
+
+
+/* Estilos generales para el footer*/
+.redes-sociales {
+display: block;
+align-items: center;
+background-color: #333; 
+text-align: center; 
+padding: 15px;
+margin: 0;
+}
+
+
+.redes-sociales ul {
+list-style-type: none; 
+margin: 0px; 
+padding: 0px;
+}
+
+.redes-sociales li {
+margin-bottom: 15px;
+display: inline;
+}
+
+.redes-sociales a {
+color: #fff; 
+text-decoration: none; 
+font-size: 18px; 
+padding: 10px 20px;  
+}
+
+.redes-sociales a:hover {
+background-color: #555; 
+}
+
+footer a {
+text-decoration: none;
+color: inherit; 
+cursor: pointer;
+}
+
+footer a:hover {
+text-decoration: underline;
+}
+
+footer a:visited {
+text-decoration: none;
+}
