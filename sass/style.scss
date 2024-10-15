@@ -1,87 +1,16 @@
-//*IMPORTS*//
+//*IMPORTS-RESET*//
 @import "Estilos-principales/reset";
 @import "Estilos-principales/header";
 @import "Estilos-principales/footer";
 
+//*IMPORT-PAGES**//
+@import "style-pages/pageIndex";
+@import "style-pages/pageCarrito";
+@import "style-pages/pageContacto";
+@import "style-pages/pageEquipos";
+@import "style-pages/pageNosotros";
 
-//*SERVICIOS*//
-.servicios-destacados{
-    text-align: center;
-    margin: 10px;
-    padding: 20px;
-    color:rgb(23, 108, 122)
-}
-
-.listas-acordeon {
-    text-align: left;
-    text-size-adjust: auto;
-    list-style-type: none;
-    line-height: 2em;
-    padding: 12px;
-    margin: 10px;
-}
-
-.resaltadoListaAcordeon {
-    font-size: 1.2em;
-    font-weight: 500;
-    color: rgb(190, 89, 148);
-}
-
-.comentarios {
-    text-align: center;
-}
-
-/* Equipos */
-.card-equipos {
-    grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas iguales */
-    grid-gap: 20px; /* Espacio entre columnas */
-    border: 1px solid #ddd; /* Borde de la tarjeta */
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    align-items: center; /* Alinea verticalmente */
-}
-
-.card-image img {
-    grid-column: 2; /* La imagen ocupará 2 columnas */
-    width: auto;
-    height: 100%;
-    border-radius: 8px;
-}
-
-.texto-equipos {
-    grid-column: 50%; /* El contenido ocupará las otras 2 columnas */
-    width:auto;
-    text-align: center;
-}
-
-.texto-equipos h2 {
-    margin: 10px 0;
-    font-size: 1.5em;
-}
-.texto-equipos p {
-    font-size: 1em;
-    color: #666;
-    text-align: left;
-}
-
-.equipos-box {
-    display: grid;
-    margin: auto;
-    padding: 20px;
-}
-
-/*CONTACTO*/
-.form-label{
-    text-align: left;
-    display: block;
-}
-
-#informacion-contacto {
-    padding: auto;
-    margin: 5px;
-}
-
-/* Modelo responsive */
+/* Modelo responsive (Media Queries)*/
 @media (min-width: 768px) {
 .menu-principal ul {
     display: flex; 
@@ -110,22 +39,4 @@
     margin-right: 0; 
     font-size: 8px; 
 }
-
-
-.card-equipos{
-    flex-direction: column;
-    align-items: center;
-}
-.servicios{
-    flex-direction: column;
-    align-items: center;
-}
-
-}
-
-.servicios {
-    grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas iguales */
-    grid-gap: 20rem; /* Espacio entre columnas */
-    padding: 20px;
-    align-items: center; /* Alinea verticalmente */
 }

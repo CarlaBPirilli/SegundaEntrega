@@ -1,4 +1,50 @@
 @charset "UTF-8";
+/* Estilos generales para el footer*/
+.redes-sociales {
+  display: block;
+  align-items: center;
+  background-color: #333;
+  text-align: center;
+  padding: 15px;
+  margin: 0;
+}
+
+.redes-sociales ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.redes-sociales li {
+  margin-bottom: 15px;
+  display: inline;
+}
+
+.redes-sociales a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.redes-sociales a:hover {
+  background-color: #555;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer a:visited {
+  text-decoration: none;
+}
+
 .servicios-destacados {
   text-align: center;
   margin: 10px;
@@ -25,7 +71,30 @@
   text-align: center;
 }
 
-/* Equipos */
+.servicios {
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicios {
+  grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas iguales */
+  grid-gap: 20rem; /* Espacio entre columnas */
+  padding: 20px;
+  align-items: center; /* Alinea verticalmente */
+}
+
+/*PAGINA CONTACTO*/
+.form-label {
+  text-align: left;
+  display: block;
+}
+
+#informacion-contacto {
+  padding: auto;
+  margin: 5px;
+}
+
+/* PAGINA EQUIPOS */
 .card-equipos {
   grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas iguales */
   grid-gap: 20px; /* Espacio entre columnas */
@@ -65,18 +134,12 @@
   padding: 20px;
 }
 
-/*CONTACTO*/
-.form-label {
-  text-align: left;
-  display: block;
+.card-equipos {
+  flex-direction: column;
+  align-items: center;
 }
 
-#informacion-contacto {
-  padding: auto;
-  margin: 5px;
-}
-
-/* Modelo responsive */
+/* Modelo responsive (Media Queries)*/
 @media (min-width: 768px) {
   .menu-principal ul {
     display: flex;
@@ -102,20 +165,6 @@
     margin-right: 0;
     font-size: 8px;
   }
-  .card-equipos {
-    flex-direction: column;
-    align-items: center;
-  }
-  .servicios {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-.servicios {
-  grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas iguales */
-  grid-gap: 20rem; /* Espacio entre columnas */
-  padding: 20px;
-  align-items: center; /* Alinea verticalmente */
 }
 
 /*# sourceMappingURL=style.css.map */

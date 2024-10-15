@@ -1,0 +1,46 @@
+/* Estilos generales para el footer*/
+.redes-sociales {
+    display: block;
+    align-items: center;
+    background-color: #333; 
+    text-align: center; 
+    padding: 15px;
+    margin: 0;
+    }
+    
+    
+    .redes-sociales ul {
+    list-style-type: none; 
+    margin: 0px; 
+    padding: 0px;
+    }
+    
+    .redes-sociales li {
+    margin-bottom: 15px;
+    display: inline;
+    }
+    
+    .redes-sociales a {
+    color: #fff; 
+    text-decoration: none; 
+    font-size: 18px; 
+    padding: 10px 20px;  
+    }
+    
+    .redes-sociales a:hover {
+    background-color: #555; 
+    }
+    
+    footer a {
+    text-decoration: none;
+    color: inherit; 
+    cursor: pointer;
+    }
+    
+    footer a:hover {
+    text-decoration: underline;
+    }
+    
+    footer a:visited {
+    text-decoration: none;
+    }
