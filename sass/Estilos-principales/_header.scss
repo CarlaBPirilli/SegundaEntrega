@@ -1,0 +1,78 @@
+/* Estilos generales para el menú */
+.menu-principal {
+    background-color: #333; 
+    text-align: center; 
+    padding: 10px 0; 
+    }
+    
+    .menu-principal ul {
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    }
+    
+    .menu-principal li {
+    margin-bottom: 15px; 
+    }
+    
+    .menu-principal a {
+    color: #fff; 
+    text-decoration: none; 
+    font-size: 18px; 
+    padding: 10px 20px; 
+    display: block; 
+    }
+    
+    .menu-principal a:hover {
+    background-color: #555; 
+    }
+    
+    /* Estilos Navegacion*/
+    nav a {
+    text-decoration: none;
+    color: inherit; 
+    cursor: pointer;
+    }
+    
+    nav a:hover {
+    text-decoration: underline;
+    }
+    
+    nav a:visited {
+    text-decoration: none;
+    }
+    
+    .video {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    }
+
+/* Modelo responsive (Media Queries)*/
+@media (min-width: 768px) {
+    .menu-principal ul {
+        display: flex; 
+        flex-direction: row; 
+        justify-content:center; 
+        align-items:stretch; 
+    }
+    
+    .menu-principal li {
+        margin-bottom: 0; 
+        margin-right: 20px; 
+    }
+    }
+    
+    @media (max-width: 767px) {
+    .menu-principal ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-items: auto;
+    }
+    
+    .menu-principal li {
+        margin-right: 0; 
+        font-size: 8px; 
+    }
+    }

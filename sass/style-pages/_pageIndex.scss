@@ -24,3 +24,32 @@
 .comentarios {
     text-align: center;
 }
+
+
+/* Modelo responsive (Media Queries)*/
+@media (min-width: 768px) {
+    .menu-principal ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    }
+    .menu-principal li {
+    margin-bottom: 0;
+    margin-right: 20px;
+    }
+}
+@media (max-width: 767px) {
+    .menu-principal ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: auto;
+    height: auto;
+    width: auto;
+    }
+    .menu-principal li {
+    margin-right: 0;
+    font-size: 8px;
+    }
+}
