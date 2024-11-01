@@ -13,17 +13,171 @@
     line-height: 2em;
     padding: 12px;
     margin: 10px;
+
 }
 
 .resaltadoListaAcordeon {
     font-size: 1.2em;
     font-weight: 500;
     color: rgb(190, 89, 148);
+
+    span{
+        color: black;
+        margin-left: 5px;
+    }
 }
 
 .comentarios {
     text-align: center;
 }
+
+
+.video-section {
+    position: relative;
+    width: 100%;
+    text-align: center;
+
+    video {
+        width: 100%;
+        height: auto;
+    }
+
+    .video-text {
+        position: absolute;
+        bottom: 20px; /* Ajusta esta distancia según lo necesites */
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        width: 90%; /* Ajusta el ancho según sea necesario */
+        max-width: 1000px;
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 5px 0 0;
+        }
+    }
+}
+
+.image-scroll-horizontal {
+    display: flex;
+    align-items: center; // Centra las imágenes verticalmente dentro del contenedor
+    justify-content: center; // Centra todas las imágenes en la línea horizontalmente
+    overflow-x: auto; // Scroll horizontal si es necesario
+    white-space: nowrap; // Evita saltos de línea
+    gap: 15px; // Espacio entre imágenes
+    padding: 10px 0;
+
+    a {
+        display: inline-block;
+        flex-shrink: 0; // Evita que se reduzcan
+    }
+
+    img {
+        width: 150px; // Ajusta el tamaño de las imágenes
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.05); // Efecto hover para destacar
+        }
+    }
+}
+
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+
+    .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 24px;
+        z-index: 10;
+
+        &.prev {
+            left: 0;
+        }
+
+        &.next {
+            right: 0;
+        }
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    }
+}
+
+.image-scroll-horizontal {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+    scrollbar-width: none; // Oculta el scrollbar en Firefox
+
+    // Oculta el scrollbar en Chrome, Edge, y Safari
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    a {
+        display: inline-block;
+        flex-shrink: 0;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+            transition: transform 0.3s;
+            scroll-snap-align: start;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+// Responsiveness: adjusts visible items
+@media (min-width: 992px) { // Large screens
+    .image-scroll-horizontal {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) { // Medium screens
+    .image-scroll-horizontal {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767px) { // Small screens
+    .image-scroll-horizontal {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
 
 
 /* Modelo responsive (Media Queries)*/

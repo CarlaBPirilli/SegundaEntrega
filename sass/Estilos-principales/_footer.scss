@@ -1,46 +1,81 @@
 /* Estilos generales para el footer*/
-.redes-sociales {
-    display: block;
+
+.redes-sociales-sec {
+    display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #333; 
     text-align: center; 
     padding: 15px;
-    margin: 0;
+    margin: 10px;
+    
+    .follow-us {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 5px; /* Espaciado mínimo entre el texto y la lista */
+        font-weight: 300;
+        color: white;
     }
-    
-    
-    .redes-sociales ul {
-    list-style-type: none; 
-    margin: 0px; 
-    padding: 0px;
+
+    .redes-sociales {
+        display: flex;
+        color: white;
+        list-style-type: none; 
+        gap: 15px;
+        margin: 0px; 
+        padding: 0px;
+
+        .fab{
+            color: white;
+            transition: color 0.3s;
+        }
+
+        li {
+            display: inline-flex;
+            align-items: center;
+            font-family: "Poppins", sans-serif;
+            
+            /* Estilos para el enlace */
+            a {
+                display: inline-flex;
+                align-items: center; /* Centra icono y texto verticalmente */
+                text-decoration: none; 
+                font-size: 1rem; 
+                padding: 10px 20px;  
+                transition: color 1.3s;
+
+                &:hover {
+                    background-color: #555; 
+                }
+
+                span {
+                    margin-left: 10px; /* Espacio entre el icono y el texto */
+                    font-size: 1rem; /* Tamaño del texto */
+                    font-family: "Poppins", sans-serif;
+                    font-size: 1rem;
+                    color: white;
+                
+                &:hover{
+                    text-decoration: underline;
+                }
+                }
+            }
+        }
     }
-    
-    .redes-sociales li {
-    margin-bottom: 15px;
-    display: inline;
-    }
-    
-    .redes-sociales a {
-    color: #fff; 
-    text-decoration: none; 
-    font-size: 18px; 
-    padding: 10px 20px;  
-    }
-    
-    .redes-sociales a:hover {
-    background-color: #555; 
-    }
-    
-    footer a {
+}
+
+/* Estilos adicionales para enlaces en el footer */
+footer a {
     text-decoration: none;
     color: inherit; 
     cursor: pointer;
-    }
-    
-    footer a:hover {
+}
+
+footer a:hover {
     text-decoration: underline;
-    }
-    
-    footer a:visited {
+}
+
+footer a:visited {
     text-decoration: none;
-    }
+}
+
